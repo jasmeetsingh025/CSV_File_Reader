@@ -1,0 +1,32 @@
+<table class="table table-bordered text-white m-2">
+    <thead>
+        <tr>
+            <% // Dynamically generate the table headers based on the keys of the first row if (filteredData.length> 0)
+                {
+                headers.forEach(header => {
+                %>
+                <th>
+                    <%= header.charAt(0).toUpperCase() + header.slice(1) %>
+                </th>
+                <% }); } %>
+        </tr>
+    </thead>
+    <tbody>
+        <% filteredRows.forEach(row=> {
+            %>
+            <tr>
+                <% // Dynamically generate the table data based on the values of each row
+                    Object.values(row).forEach(value=> {
+                    %>
+                    <td>
+                        <%= value %>
+                    </td>
+                    <% }); %>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>
+
+<% if (filteredRows.length===0) { %>
+    <p>No results found.</p>
+    <% } %>

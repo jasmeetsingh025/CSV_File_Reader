@@ -1,0 +1,29 @@
+{
+  "name": "fileuploading",
+  "version": "1.0.0",
+  "description": "This application is a practice to how you upload a file using MVC.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Jasmeet Singh",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "validator": "^13.12.0"
+  }
+}

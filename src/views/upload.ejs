@@ -1,0 +1,30 @@
+<%- contentFor('body') %>
+    <div class="container mt-5 text-white">
+        <h2>CSV Data Table</h2>
+        <table class="table table-bordered text-white">
+            <thead>
+                <tr>
+                    <% if (data.length> 0) { %>
+                        <% headers.forEach(function(header) { %>
+                            <th>
+                                <%= header %>
+                            </th>
+                            <% }) %>
+                                <% } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (data.length> 0) { %>
+                    <% rows.forEach(function(row) { %>
+                        <tr>
+                            <% headers.forEach(function(header) { %>
+                                <td>
+                                    <%= row[header] %>
+                                </td>
+                                <% }) %>
+                        </tr>
+                        <% }) %>
+                            <% } %>
+            </tbody>
+        </table>
+    </div>
