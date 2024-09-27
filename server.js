@@ -5,6 +5,9 @@ import cookieParser from "cookie-parser";
 import path from "path";
 import expressEjsLayouts from "express-ejs-layouts";
 import fileRoutes from "./src/routes/upload.route.js";
+import dotenv from "dotenv";
+const configEnvPath = path.resolve("config", ".env");
+dotenv.config({ path: configEnvPath });
 
 export const server = express();
 
